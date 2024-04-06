@@ -1,6 +1,6 @@
 <?php
 require('../model/database.php');
-require('../model')
+require('../model/user_db.php');
 
 $action = filter_input(INPUT_POST, 'action');
 if ($action === NULL){
