@@ -21,12 +21,17 @@ else if ($action == 'add_user'){
     $userName = filter_input(INPUT_POST, 'userName');
     $password = filter_input(INPUT_POST, 'password');
 
-    //ADD ERROR CHECKING TO SEE IF USERNAME ALREADY EXISTS
-
+    $sameUserNameCheck = get_user($userName);
+    
+    if(empty($sameUserNameCheck)){
     add_user($email, $userName, $password);
+    header("Location: ./Sign_Up_Successful.php");
+    }
 
-    //ADD A redirection Page that says something like "Account Creation complete"
-    header("Location: .");
+    else{
+        $error = "That Username Already exists please try a different name";
+        include('../Errors/error.php');
+    }
 }
 
 ?>
