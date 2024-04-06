@@ -18,3 +18,16 @@ function add_user_exercise($userName, $workoutName, $exerciseName, $reps, $sets,
     $statement->execute();
     $statement->closeCursor();
 }
+
+function get_workout_exercices($userName, $workoutName){
+    global $db;
+
+    $query = 'SELECT * FROM user_workouts WHERE userName = :userName AND workoutName = :workoutName';
+    $statement = $db->prepare($query);
+    $statement->bindValue(':userName', $userName);
+    $statement->bindValue(':workoutName', $workoutName);
+    $statement->execute();
+    $workoutExercises = $statement->fetchAll();
+    $statement->closeCursor();
+    return $workoutExercises;
+}
