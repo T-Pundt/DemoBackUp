@@ -45,3 +45,7 @@ else if($action == 'logout_user'){
     session_destroy();
     header("Location: ../main_index.php");
 }
+
+else if($action == 'workout_from_template'){
+    header("Location: ../workout_From_Template");
+}

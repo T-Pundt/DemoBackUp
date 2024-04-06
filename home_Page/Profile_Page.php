@@ -9,13 +9,13 @@ foreach($users as $user){
 
 
 <main>
-    <h1>This is the profile page</h1>
-
-    <button type="button" class="large_button" onclick="window.location.href='./index.php'">Return Home</button>
+    <button type="button" class="home_button" onclick="window.location.href='./index.php'">Return Home</button>
 
     <form method="post">
     <button type="submit" class="delete_button" name="action" value="delete_user">Delete Account</button>
     </form>
+
+    <h1>Profile/Settings</h1>
 
     <form action="." method="post" id="aligned">
         <input type="hidden" name="action" value="update_user">
@@ -30,7 +30,7 @@ foreach($users as $user){
         <input type="submit" value="Update Profile" /><br>
     </form>
 
-    
+
         <form method="post">
         <button type="submit" class="logout_button" name="action" value="logout_user">Log Out</button>
         </form>
