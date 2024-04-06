@@ -26,6 +26,17 @@ else if ($action == 'sign_in'){
          $error = "User not found. Please try again";
          include('../Errors/error.php');
      }
+
+     foreach($users as $user){
+        if($password != $user['password']){
+            $error = "The incorrect password was entered. Please try again";
+            include('../Errors/error.php');
+        }
+     }
+
+     session_start();
+     $_SESSION['userName'] = $userName;
+     header("Location: ../home_Page");
 }
 
 ?>
