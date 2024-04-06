@@ -49,3 +49,7 @@ else if($action == 'logout_user'){
 else if($action == 'workout_from_template'){
     header("Location: ../workout_From_Template");
 }
+
+else if($action == 'workout_summary'){
+    header("Location: ../summary_from_home");
+}

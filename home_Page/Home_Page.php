@@ -14,8 +14,10 @@
     </form>
 
     <form method="post">
-    <button type="submit" class="large_button" name="action" value="custom_workout">Custom Workout
-    </button>
+    <button type="submit" class="large_button" name="action" value="custom_workout">Custom Workout</form>
+
+    <form method="post">
+    <button type="submit" class="large_button" name="action" value="workout_summary">Workout Summary</button>
     </form>
 
 </main>
