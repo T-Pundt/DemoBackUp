@@ -12,3 +12,19 @@ function get_user($userName){
 
     return $user;
 }
+
+function add_user($email, $userName, $password){
+
+    global $db;
+    $query = 'INSERT INTO users 
+                    (email, userName, password)
+              VALUES
+                    (:email, :userName, :password)';
+
+    $statement = $db->prepare($query);
+    $statement->bindValue(':email', $email);
+    $statement->bindValue(':userName', $userName);
+    $statement->bindValue(':password', $password);
+    $statement->execute();
+    $statement->closeCursor();
+}
