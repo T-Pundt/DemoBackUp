@@ -28,5 +28,10 @@ foreach($users as $user){
 
         <label>&nbsp;</label>
         <input type="submit" value="Update Profile" /><br>
+    </form>
 
+    
+        <form method="post">
+        <button type="submit" class="logout_button" name="action" value="logout_user">Log Out</button>
+        </form>
 </main>

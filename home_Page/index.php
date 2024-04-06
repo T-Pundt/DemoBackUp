@@ -39,3 +39,9 @@ else if($action == 'delete_user'){
     header("Location: ../main_index.php");
 
 }
+
+else if($action == 'logout_user'){
+    setcookie(session_name(), '', time() - 3600, '/');
+    session_destroy();
+    header("Location: ../main_index.php");
+}
