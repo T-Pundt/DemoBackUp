@@ -14,7 +14,7 @@ if ($action == 'view_sign_in_page'){
     include('Sign_In.php');
 }
 
-if ($action == 'sign_in'){
+else if ($action == 'sign_in'){
 
 }
 
