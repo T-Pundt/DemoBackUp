@@ -19,7 +19,12 @@ else if ($action == 'sign_in'){
     $email = filter_input(INPUT_POST, 'email');
     $password = filter_input(INPUT_POST, 'password');
 
+    $user = get_user($email);
 
+    if(empty($user)){
+        $error = "User not found. Please try again";
+        include('../Errors/error.php');
+    }
 }
 
 ?>
