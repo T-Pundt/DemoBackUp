@@ -1,5 +1,6 @@
 <?php
-
+require('../model/database.php');
+require('../model')
 
 $action = filter_input(INPUT_POST, 'action');
 if ($action === NULL){
@@ -15,6 +16,9 @@ if ($action == 'view_sign_in_page'){
 }
 
 else if ($action == 'sign_in'){
+    $email = filter_input(INPUT_POST, 'email');
+    $password = filter_input(INPUT_POST, 'password');
+
 
 }
 
