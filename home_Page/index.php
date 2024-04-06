@@ -53,3 +53,7 @@ else if($action == 'workout_from_template'){
 else if($action == 'workout_summary'){
     header("Location: ../summary_from_home");
 }
+
+else if($action == 'custom_workout'){
+    header("Location: ../custom_workout");
+}

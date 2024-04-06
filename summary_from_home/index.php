@@ -1,6 +1,6 @@
 <?php
 require('../model/database.php');
-require('../model/user_db.php');
+require('../model/user_workouts_db.php');
 
 $action = filter_input(INPUT_POST, 'action');
 if ($action === NULL){
@@ -18,7 +18,6 @@ if ($action == 'lookup_workout'){
     $workoutName = filter_input(INPUT_POST, 'workoutName');
     session_start();
     $userName = $_SESSION['userName'];
-
     $workoutExercies = get_workout_exercices($userName, $workoutName);
 
     if(empty($workoutExercies)){
@@ -26,6 +25,6 @@ if ($action == 'lookup_workout'){
         include('../errors/error.php');
     }
     else{
-        
+        include('../workout_Summary/view_workout_summary.php');
     }
 }

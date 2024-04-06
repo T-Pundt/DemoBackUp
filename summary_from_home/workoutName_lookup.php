@@ -1,6 +1,9 @@
-<main>Look up your workout</main>
 
-<form action="." method="post" id="aligned">
+<main>
+    <button type="button" class="home_button" onclick="window.location.href='../home_Page'">Return Home</button>
+    <h1>Look up your workout</h1>
+
+    <form action="." method="post" id="aligned">
         <input type="hidden" name="action" value="lookup_workout">
         
         <label>Workout Name:</label>
@@ -9,3 +12,5 @@
         <label>&nbsp;</label>
         <input type="submit" value="Find Workout" /><br>
     </form>
+
+</main>
