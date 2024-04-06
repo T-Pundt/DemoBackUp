@@ -1,6 +1,6 @@
 <?php
     $dsn = 'mysql:host=localhost;dbname=tracked';
-    $username = 'ts_user';
+    $username = 'demo_user';
     $password = 'pa55word';
 
     try {
