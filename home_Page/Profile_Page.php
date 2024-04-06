@@ -11,6 +11,8 @@ foreach($users as $user){
 <main>
     <h1>This is the profile page</h1>
 
+    <button type="button" class="large_button" onclick="window.location.href='./index.php'">Return Home</button>
+
     <form method="post">
     <button type="submit" class="delete_button" name="action" value="delete_user">Delete Account</button>
     </form>

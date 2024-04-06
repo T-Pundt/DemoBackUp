@@ -11,7 +11,6 @@ if ($action === NULL){
     }
 }
 
-
 if ($action == 'view_home_page'){
     include('Home_Page.php');
 }
@@ -28,4 +27,15 @@ else if($action == 'update_user'){
     $password = filter_input(INPUT_POST, 'password');
     update_user($userName, $password, $email);
     header("Location: ./Profile_Update_Successful.php ");
+}
+
+else if($action == 'delete_user'){
+    session_start();
+    $userName = $_SESSION['userName'];
+
+    delete_user($userName);
+    setcookie(session_name(), '', time() - 3600, '/');
+    session_destroy();
+    header("Location: ../main_index.php");
+
 }

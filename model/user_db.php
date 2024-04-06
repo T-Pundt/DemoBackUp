@@ -41,3 +41,12 @@ function update_user($userName, $password, $email){
     $statement->execute();
     $statement->closeCursor();
 }
+
+function delete_user($userName){
+    global $db;
+    $query = 'DELETE FROM users WHERE userName = :userName';
+    $statement = $db->prepare($query);
+    $statement->bindvalue(':userName', $userName);
+    $statement->execute();
+    $statement->closeCursor();
+}
