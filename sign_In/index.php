@@ -32,11 +32,12 @@ else if ($action == 'sign_in'){
             $error = "The incorrect password was entered. Please try again";
             include('../Errors/error.php');
         }
+        else{
+            session_start();
+            $_SESSION['userName'] = $userName;
+            header("Location: ../home_Page");
+        }
      }
-
-     session_start();
-     $_SESSION['userName'] = $userName;
-     header("Location: ../home_Page");
 }
 
 ?>
