@@ -28,3 +28,16 @@ function add_user($email, $userName, $password){
     $statement->execute();
     $statement->closeCursor();
 }
+
+function update_user($userName, $password, $email){
+
+    global $db;
+    $query = 'UPDATE users SET email = :email, password = :password WHERE userName = :userName';
+
+    $statement = $db->prepare($query);
+    $statement->bindValue(':email', $email);
+    $statement->bindValue(':userName', $userName);
+    $statement->bindValue(':password', $password);
+    $statement->execute();
+    $statement->closeCursor();
+}
