@@ -16,15 +16,16 @@ if ($action == 'view_sign_in_page'){
 }
 
 else if ($action == 'sign_in'){
-    $email = filter_input(INPUT_POST, 'email');
+    $userName = filter_input(INPUT_POST, 'userName');
     $password = filter_input(INPUT_POST, 'password');
 
-    $user = get_user($email);
 
-    if(empty($user)){
-        $error = "User not found. Please try again";
-        include('../Errors/error.php');
-    }
+    $users = get_user($userName);
+
+     if(empty($users)){
+         $error = "User not found. Please try again";
+         include('../Errors/error.php');
+     }
 }
 
 ?>

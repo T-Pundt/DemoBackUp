@@ -1,11 +1,14 @@
 <?php 
 
-function get_user($email){
+function get_user($userName){
     global $db;
 
-    $query = 'SELECT * FROM users WHERE email = :email';
+    $query = 'SELECT * FROM users WHERE userName = :userName';
     $statement = $db->prepare($query);
-    $statement->bindValue(':email', $email);
+    $statement->bindValue(':userName', $userName);
     $statement->execute();
+    $user = $statement->fetchAll();
     $statement->closeCursor();
+
+    return $user;
 }

@@ -4,8 +4,8 @@
         <form action="." method="post" id="aligned">
         <input type="hidden" name="action" value="sign_in">
 
-        <label>Email</label>
-        <input type="text" name="email" required><br>
+        <label>Username</label>
+        <input type="text" name="userName" required><br>
 
         <label>Password</label>
         <input type="text" name="password" required><br>
