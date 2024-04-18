@@ -14,3 +14,19 @@
     min-height: 360px;
     min-width: 800px;
 }
+
+
+/* Buttons */
+
+.large_button {
+    display: flex;
+    width: 250.663px;
+    height: 79px;
+    padding: 23px 25px;
+    justify-content: center;
+    align-items: center;
+    gap: 29px; 
+    border-radius: 40px;
+    background: #EDEEF2;
+    box-shadow: -4px -4px 8px 0px #FFF, 4px 4px 8px 0px #BEBEBE;
+}
