@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Tracked - Account Created</title>
+        <title>Tracked - Account Created!</title>
         <link rel="stylesheet" href="../css/main.css">
     </head>
     <main class="center">

@@ -25,7 +25,6 @@
                 <input type="submit" name="add_exercise" value="Add Exercise"><br>
             </form>
         <?php endforeach; ?>
-        
-        </form>
+        <!-- </form> -->
     </main>
 </html>

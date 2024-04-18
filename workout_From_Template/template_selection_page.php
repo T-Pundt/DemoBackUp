@@ -27,6 +27,5 @@
         <input type="hidden" name="action" value="start_workout">
         <input type="submit" name="start_workout" value="Start Workout">
         </form>
-
     </main>
 </html>

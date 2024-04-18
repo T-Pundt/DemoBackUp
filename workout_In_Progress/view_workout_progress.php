@@ -3,7 +3,7 @@
         <title>Tracked - Workout In Progress</title>
         <link rel="stylesheet" href="../css/main.css">
     </head>
-
+    
     <main class="center">
     <h1>Workout In Progress</h1>
 
