@@ -1,19 +1,24 @@
-<main>
-    <h1>Sign In</h1>
+<html>
+    <head>
+        <title>Tracked - Sign In</title>
+        <link rel="stylesheet" href="../css/main.css">
+    </head>
 
-        <form action="." method="post" id="aligned">
-        <input type="hidden" name="action" value="sign_in">
+    <main class="center">
+        <h1>Sign In</h1>
 
-        <label>Username</label>
-        <input type="text" name="userName" required><br>
+            <form action="." method="post" id="aligned">
+            <input type="hidden" name="action" value="sign_in">
 
-        <label>Password</label>
-        <input type="text" name="password" required><br>
+            <label>Username</label>
+            <input type="text" name="userName" required><br>
 
-
-        <label>&nbsp;</label>
-        <input type="submit" value="Sign In" /><br>
-        </form>
+            <label>Password</label>
+            <input type="text" name="password" required><br>
 
 
-</main>
+            <label>&nbsp;</label>
+            <input type="submit" value="Sign In" /><br>
+            </form>
+    </main>
+</html>
