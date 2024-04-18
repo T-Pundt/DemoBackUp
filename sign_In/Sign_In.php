@@ -11,10 +11,10 @@
                 <input type="hidden" name="action" value="sign_in">
 
                 <label>Username</label>
-                <input type="text" name="userName" required><br>
+                <input type="text" name="userName" class="text_input" placeholder="Username" required><br>
                 <br>
                 <label>Password</label>
-                <input type="text" name="password" required><br>
+                <input type="text" name="password" class="text_input" placeholder="Password" required><br>
 
                 
                 <br><br>

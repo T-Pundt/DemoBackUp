@@ -69,6 +69,19 @@
     letter-spacing: 1px;
 }
 
+/* Form Inputs */
+.text_input {
+    display: flex;
+    width: 300px;
+    height: 80px;
+    padding: 0px 25px 0px 16px;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 16px;
+    background: linear-gradient(0deg, #E6EEF8 0%, #E6EEF8 100%), #CFD8DC;
+    box-shadow: -4px -4px 12px 0px rgba(253, 255, 255, 0.80) inset, 4px 4px 12px 0px rgba(187, 195, 206, 0.60) inset;
+}
+
 /* Text */
 
 .title {
