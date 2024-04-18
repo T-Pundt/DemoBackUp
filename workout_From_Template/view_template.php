@@ -1,4 +1,10 @@
-<main>  
+<html>
+    <head>
+        <title>Tracked - View Template</title>
+        <link rel="stylesheet" href="../css/main.css">
+    </head>
+
+    <main class="center">
         <h1>Template view</h1>
         <?php foreach($templates as $template) : ?>
             <form action="." method="post">
@@ -20,5 +26,6 @@
             </form>
         <?php endforeach; ?>
         
-    </form>
-</main>
+        </form>
+    </main>
+</html>
