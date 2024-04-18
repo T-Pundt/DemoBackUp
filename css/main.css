@@ -6,14 +6,6 @@
 }
 
 .center {
-    /* width: 360;
-    height: 800;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    margin-left: -(360/2)u;
-    margin-top: -(800/2)u; */
-
     display: flex;
     flex-direction: column;
     justify-content: center;
