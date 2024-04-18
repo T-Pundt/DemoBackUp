@@ -30,3 +30,14 @@
     background: #EDEEF2;
     box-shadow: -4px -4px 8px 0px #FFF, 4px 4px 8px 0px #BEBEBE;
 }
+
+.large_button_text {
+    color: #575F6B;
+    font-family: Roboto;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 152.401px;
+    flex-shrink: 0;
+}
