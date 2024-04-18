@@ -4,8 +4,8 @@
         <link rel="stylesheet" href="css/main.css">
     </head>
     <main class="center">
+            <br>
             <img src="images/tracked.png"/>
-
             <br><br><br>
             <button type="button" class="large_button" onclick="window.location.href='sign_In'">
             <div class="large_button_text">Sign In</div>
