@@ -14,6 +14,7 @@ if ($action === NULL){
 if ($action == 'display_exercises') {
     session_start();
     $userName = $_SESSION['userName'];
+    $workoutName = $_SESSION['workoutName'];
     $previous_workoutName = $_SESSION['previous_workoutName'];
 
     $workoutExercies = get_workout_exercices($userName, $previous_workoutName);
@@ -38,4 +39,42 @@ if ($action == 'add_exercise'){
     add_user_exercise($userName, $workoutName, $exerciseName, $reps, $sets, $weight);
     
     header("Location: ./index.php");
+}
+
+if ($action == 'review_new_workout'){
+    session_start();
+    $userName = $_SESSION['userName'];
+    $workoutName = $_SESSION['workoutName'];
+
+    $workoutExercies = get_workout_exercices($userName, $workoutName);
+
+    if(empty($workoutExercies)){
+        $error = "No exercises found for the workout. Please try adding a workout.";
+        include('../errors/error.php');
+    }
+    else{
+        include('review_new_workout.php');
+    }
+}
+
+
+if ($action == 'update_exercise'){
+    session_start();
+    $userName = $_SESSION['userName'];
+    $workoutName = $_SESSION['workoutName'];
+    $exerciseName = filter_input(INPUT_POST, 'exerciseName');
+    $reps = filter_input(INPUT_POST, 'reps');
+    $sets = filter_input(INPUT_POST, 'sets');
+    $weight = filter_input(INPUT_POST, 'weight');
+
+
+    if (isset($_POST['update_exercise_value'])){
+        update_workout_exercise($userName, $workoutName, $exerciseName, $reps, $sets, $weight);
+        include('updated.php');
+    }
+    else{
+        delete_exercise_from_workout($userName, $workoutName, $exerciseName);
+        include('deleted.php');
+    }
+
 }

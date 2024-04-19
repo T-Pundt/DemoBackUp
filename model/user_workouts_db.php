@@ -52,3 +52,28 @@ function get_user_workouts($userName){
     $statement->closeCursor();
     return $user_workouts;
 }
+
+function delete_exercise_from_workout($userName, $workoutName, $exerciseName){
+    global $db;
+    $query = 'DELETE FROM user_workouts WHERE userName = :userName AND workoutName = :workoutName AND exerciseName = :exerciseName';
+    $statement = $db->prepare($query);
+    $statement->bindvalue(':userName', $userName);
+    $statement->bindvalue(':workoutName', $workoutName);
+    $statement->bindvalue(':exerciseName', $exerciseName);
+    $statement->execute();
+    $statement->closeCursor();
+}
+
+function update_workout_exercise($userName, $workoutName, $exerciseName, $reps, $sets, $weight){
+    global $db;
+    $query = 'UPDATE user_workouts SET reps = :reps, sets = :sets, weight = :weight WHERE userName = :userName AND workoutName = :workoutName AND exerciseName = :exerciseName';
+    $statement = $db->prepare($query);
+    $statement->bindvalue(':userName', $userName);
+    $statement->bindvalue(':workoutName', $workoutName);
+    $statement->bindvalue(':exerciseName', $exerciseName);
+    $statement->bindvalue(':reps', $reps);
+    $statement->bindvalue(':sets', $sets);
+    $statement->bindvalue(':weight', $weight);
+    $statement->execute();
+    $statement->closeCursor();
+}
