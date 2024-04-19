@@ -78,3 +78,7 @@ if ($action == 'update_exercise'){
     }
 
 }
+
+if ($action == 'start_workout'){
+    header("Location: ../workout_In_Progress");
+}

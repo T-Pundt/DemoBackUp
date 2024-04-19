@@ -12,7 +12,7 @@
 	        <p>Reps:<?php echo htmlspecialchars($workoutExercise['reps'])?> Sets:<?php echo htmlspecialchars($workoutExercise['sets'])?> Weight: <?php echo htmlspecialchars($workoutExercise['weight'])?></p>
 	        <?php endforeach; ?>
 
-	        <button type="button" class="btn-m" onclick="window.location.href='../home_Page'">Return Home</button>
+			<button type="button" class="btn-l" onclick="window.location.href='../home_Page'">Return Home</button>
 	    </main>
 	</body>
 </html>

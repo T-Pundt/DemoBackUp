@@ -29,7 +29,7 @@
                     <?php endforeach; ?>
 
                     <form method="post">
-                    <button type="submit" class="btn-l" name="action" value="review_new_workout">Start Workout
+                    <button type="submit" class="btn-l" name="action" value="start_workout">Start Workout
                     </button>
                     </form>
     </main>
