@@ -23,7 +23,7 @@
             <input type="text" name="weight" required><br>
 
             <label>&nbsp;</label>
-            <input type="submit" value="Add Exercise" /><br>
+            <input type="submit" class="btn-l" value="Add Exercise" /><br>
         </form>
 
 

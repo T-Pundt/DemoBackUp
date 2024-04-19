@@ -12,7 +12,7 @@
 	            <input type="text" name="workoutName" required><br>
 
 	            <label>&nbsp;</label>
-	            <input type="submit" value="Proceed To Templates" /><br>
+	            <input type="submit" class="btn-l" value="Proceed To Templates" /><br>
 			</form>
 	    </main>
 	</body>

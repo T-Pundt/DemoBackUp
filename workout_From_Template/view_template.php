@@ -22,7 +22,7 @@
     	            <label>Weight</label>
     	            <input type="text" name="weight" required><br>
     	            <label>&nbsp;</label>
-    	            <input type="submit" name="add_exercise" value="Add Exercise"><br>
+    	            <input type="submit" class="btn-l" name="add_exercise" value="Add Exercise"><br>
     	        </form>
     	    <?php endforeach; ?>
     	    <!-- </form> -->

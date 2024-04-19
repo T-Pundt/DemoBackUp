@@ -24,7 +24,7 @@ main {
     min-width: 400px;
 }
 /*Buttons*/
-button {
+button,input[type="submit"] {
 	border: none;
 	background-color: var(--color-primary);
 	margin: 4px;

@@ -1,13 +1,14 @@
-<head>
-<link rel="stylesheet" href="../css/main.css">
-</head>
+<html>
+	<head>
+		<link rel="stylesheet" href="../css/main.css">
+	</head>
 
-<body>
-    <main>
-        <h1>Review Workout: '<?php echo htmlspecialchars($workoutName)?>'</h1>
+	<body>
+	    <main>
+	        <h1>Review Workout: '<?php echo htmlspecialchars($workoutName)?>'</h1>
         
-        <?php foreach($workoutExercies as $workoutExercise) : ?>
-            <form action="." method="post">
+	        <?php foreach($workoutExercies as $workoutExercise) : ?>
+	            <form action="." method="post">
                 	<input type="hidden" name="action" value="update_exercise">
                 	<input type="hidden" name="workoutName" required>
 
@@ -25,12 +26,12 @@
     	            <input type="submit" name="update_exercise_value" value="Update">
                     <label>&nbsp;</label>
     	            <input type="submit" name="delete_exercise" value="Delete"><br>
-                    </form>
-                    <?php endforeach; ?>
+                </form>
+            <?php endforeach; ?>
 
-                    <form method="post">
-                    <button type="submit" class="btn-l" name="action" value="start_workout">Start Workout
-                    </button>
-                    </form>
-    </main>
-</body>
+            <form method="post">
+				<button type="submit" class="btn-l" name="action" value="start_workout">Start Workout</button>
+            </form>
+    	</main>
+	</body>
+</html>
