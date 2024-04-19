@@ -1,7 +1,7 @@
 <html>
     <head>
         <title>Tracked - Workout Lookup</title>
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="../css/main.css">
     </head>
 	<body>
 	    <main>
@@ -17,6 +17,12 @@
 	            <label>&nbsp;</label>
 	            <input type="submit" value="Find Workout" /><br>
 	        </form>
+
+
+			<h1>View all previous workouts</h1>
+			<form method="post">
+        	<button type="submit" class="btn-l" name="action" value="list_all_workouts">List Workouts</button>
+        	</form>
 
 	    </main>
 	</body>

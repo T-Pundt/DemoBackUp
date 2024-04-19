@@ -40,3 +40,15 @@ function delete_user_workouts($userName){
     $statement->execute();
     $statement->closeCursor();
 }
+
+function get_user_workouts($userName){
+    global $db;
+
+    $query = 'SELECT workoutName FROM user_workouts WHERE userName = :userName';
+    $statement = $db->prepare($query);
+    $statement->bindvalue(':userName', $userName);
+    $statement->execute();
+    $user_workouts = $statement->fetchAll();
+    $statement->closeCursor();
+    return $user_workouts;
+}

@@ -28,3 +28,18 @@ if ($action == 'lookup_workout'){
         include('../workout_Summary/view_workout_summary.php');
     }
 }
+
+
+if ($action == 'list_all_workouts'){
+    session_start();
+    $userName = $_SESSION['userName'];
+
+    $workout_names = get_user_workouts($userName);
+    $workout_names = array_unique($workout_names, SORT_REGULAR);
+
+    if(empty($workout_names)){
+        $error = "No workouts found: Please create a workout first";
+        include('../errors/error.php');
+    }
+    include('list_all_workouts.php');
+}
