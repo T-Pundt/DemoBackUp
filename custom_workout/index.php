@@ -42,6 +42,6 @@ if ($action == 'add_exercise'){
     include('add_exercise_page.php');
 }
 
-if ($action == 'start_workout'){
-    header("Location: ../workout_In_Progress");
+if ($action == 'review_workout'){
+    header("Location: ../review_workout_current");
 }
