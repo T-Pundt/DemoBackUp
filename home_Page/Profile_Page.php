@@ -7,7 +7,11 @@ foreach($users as $user){
 }
 ?>
 
+<head>
+<link rel="stylesheet" href="../css/main.css">
+</head>
 
+<body>
 <main>
     <button type="button" class="btn-m" onclick="window.location.href='./index.php'">Return Home</button>
 
@@ -35,3 +39,4 @@ foreach($users as $user){
         <button type="submit" class="btn-l" name="action" value="logout_user">Log Out</button>
         </form>
 </main>
+</body>
