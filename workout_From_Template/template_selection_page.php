@@ -24,8 +24,8 @@
         	</form>
 
         	<form action="." method="post">
-        		<input type="hidden" name="action" value="start_workout">
-        		<input type="submit" name="start_workout" value="Start Workout">
+        		<input type="hidden" name="action" value="review_workout">
+        		<input type="submit" name="review_workout" value="Review Workout">
         	</form>
     	</main>
 	</body>

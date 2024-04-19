@@ -43,8 +43,8 @@ else if ($action == 'view_back_template'){
     include('view_template.php');
 }
 
-else if ($action == 'start_workout'){
-    header("Location: ../workout_In_Progress");
+else if ($action == 'review_workout'){
+    header("Location: ../review_workout_current");
 }
 
 else if ($action == 'add_exercise') {
