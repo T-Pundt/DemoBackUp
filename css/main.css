@@ -1,100 +1,177 @@
-/* This is where the css code goes */
+/*Variables*/
+:root {
+	/*TODO: Implement dark mode.*/
+	--color-page: #f5f5f5;
+	--color-primary: #edeef2;
+	--color-secondary: #bebebe;
+	--color-secondary-semi: rgb(from var(--color-secondary) r g b / 0.375);
+	--color-purple: #9575cd;
+	--color-text-input-back: #e6eef8;
+	--color-text-input: #90a4ae;
+	--color-error: #f06292;
+}
+/*Page*/
+body {
+	background-color: var(--color-page);
+}
+/*Containers*/
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+    min-height: 300px;
+    min-width: 400px;
+}
+/*Buttons*/
+button {
+	border: none;
+	background-color: var(--color-primary);
+	margin: 4px;
+	box-shadow: -4px -4px 8px #fff, 4px 4px 8px #bebebe;
+	/*Interaction*/
+	&:not(:disabled) {
+		&:hover {
+			outline: 1px solid var(--color-secondary-semi);
+			outline-offset: 4px;
+		}
+		&:focus {
+			outline: 3px solid var(--color-secondary-semi);
+			outline-offset: 4px;
+		}
+		&:active {
+			box-shadow: -4px -4px 4px #fff inset,
+				4px 4px 4px var(--color-secondary) inset;
+		}
+	}
+	/*disabled*/
+	/*Note: aria-disabled should be used, rather than disabled, as old screen readers completely ignore disabled elements.*/
+	&:disabled {
+		box-shadow: 0px 0px 0px 1.5px var(--color-secondary);
+	}
+	/*Sizes*/
+	&.btn-s {
+		width: 40px;
+		height: 40px;
+		border-radius: 8px;
+	}
+	&.btn-m {
+		width: 75px;
+		height: 75px;
+		border-radius: 15px;
+	}
+	&.btn-l {
+		width: 200px;
+		height: 50px;
+		border-radius: 15px;
+	}
+	&.btn-xl {
+		width: 250px;
+		height: 75px;
+		border-radius: 40px;
+	}
+	/*Shape*/
+	&.btn-circle {
+		height: 100px;
+		width: 100px;
+		border-radius: 100%;
+	}
+}
+/*Input stuff*/
+form {
+	label {
+	}
+	input {
+		&::-ms-reveal,
+		::-ms-clear {
+			display: none;
+		}
+		&[type="checkbox"] {
+			box-sizing: border-box;
+			width: 40px;
+			height: 40px;
+			margin: 6px;
+			padding: 0; /*
+			border: 2px solid var(--color-secondary);*/
+			border-radius: 8px;
+			box-shadow: -4px -4px 8px #fff, 4px 4px 8px var(--color-secondary);
+			appearance: none;
+			background-color: transparent;
 
+			&:checked {
+				background-size: cover;
+				padding: 2px;
+			}
+			&:not(:disabled) {
+				&:checked {
+					background-color: var(--color-purple);
+					background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 24 24" xml:space="preserve"><path d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z" style="fill: %234B5563;"/></svg>');
+				}
+				&:hover {
+					outline: 1px solid var(--color-secondary-semi);
+					outline-offset: 4px;
+				}
+				&:focus {
+					outline: 3px solid var(--color-secondary-semi);
+					outline-offset: 4px;
+				}
+			}
+			&:disabled {
+				box-shadow: 0px 0px 0px 1.5px var(--color-secondary);
+				&:checked {
+					background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 24 24" xml:space="preserve"><path d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z" style="fill: %234B5563;"/></svg>');
+				}
+			}
+			& + label {
+				text-align: center;
+				vertical-align: 100%;
+			}
+		}
+		&[type="text"],
+		&[type="password"] {
+			border: none;
+			border-radius: 16px;
+			height: 80px;
+			width: 300px;
+			box-shadow: -4px -4px 8px #fff, 4px 4px 8px var(--color-secondary),
+				inset -4px -4px 8px #fff,
+				inset 4px 4px 8px var(--color-secondary);
+			padding-left: 16px;
+			text-shadow: none;
+			background-color: var(--color-text-input-back);
+			&:not(:disabled) {
+				&:hover {
+					outline: 1px solid var(--color-secondary-semi);
+					outline-offset: 4px;
+				}
+				&:focus {
+					outline: 3px solid var(--color-secondary-semi);
+					outline-offset: 4px;
+				}
+			}
+			&:disabled {
+				box-shadow: 0px 0px 0px 1.5px var(--color-secondary);
+			}
+			&.error {
+				border: 2px solid #f06292;
+			}
+			&::placeholder{
+				color: var(--color-text-input);
+			}
+			&:is([type="password"]) {
+				font-family: Verdana;
+				letter-spacing: 0.125em;
+				&::placeholder {
+					font-family: "Roboto", sans-serif;
+					letter-spacing: normal;
+				}
+			}
+		}
+	}
+}
+
+/*Text*/
 * {
-    background: #EDEEF2;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.center {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    min-height: 360px;
-    min-width: 800px;
-}
-
-
-/* Buttons */
-
-.large_button {
-    display: flex;
-    width: 250.663px;
-    height: 79px;
-    padding: 23px 25px;
-    justify-content: center;
-    align-items: center;
-    gap: 29px; 
-    border-radius: 40px;
-    background: #EDEEF2;
-    box-shadow: -4px -4px 8px 0px #FFF, 4px 4px 8px 0px #BEBEBE;
-}
-
-.large_button_text {
-    color: #575F6B;
-    font-family: Roboto;
-    font-size: 28px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    width: 152.401px;
-    flex-shrink: 0;
-}
-
-.med_button {
-    width: 194px;
-    height: 49px;
-    flex-shrink: 0;
-    border-radius: 16px;
-    background: rgba(149, 117, 205, 0.56);
-    color: #FFF;
-    text-align: center;
-    font-family: Roboto;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    letter-spacing: 1px;
-}
-
-.med_button_text {
-    color: #FFF;
-    text-align: center;
-    font-family: Roboto;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    letter-spacing: 1px;
-}
-
-/* Form Inputs */
-.text_input {
-    display: flex;
-    width: 300px;
-    height: 80px;
-    padding: 0px 25px 0px 16px;
-    align-items: center;
-    flex-shrink: 0;
-    border-radius: 16px;
-    background: linear-gradient(0deg, #E6EEF8 0%, #E6EEF8 100%), #CFD8DC;
-    box-shadow: -4px -4px 12px 0px rgba(253, 255, 255, 0.80) inset, 4px 4px 12px 0px rgba(187, 195, 206, 0.60) inset;
-}
-
-/* Text */
-
-.title {
-    width: 269px;
-    height: 20px;
-    flex-shrink: 0;
-    color: #575F6B;
-    text-align: center;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    font-family: Roboto;
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: 1px;
+	font-family: "Roboto", sans-serif;
+	text-shadow: 0.125em 0.25em 0.25em #0004;
 }
