@@ -16,7 +16,7 @@
 	    	    <?php endforeach; ?>
 				
 	        	<form method="post">
-	        	<button type="submit" class="large_button" name="action" value="workout_complete">Complete</button>
+	        	<button type="submit" class="btn-l" name="action" value="workout_complete">Complete</button>
 	        	</form>
 	    	</main>
 	</body>

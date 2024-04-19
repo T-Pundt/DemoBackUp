@@ -19,7 +19,7 @@
 	
 	                <br><br>
 	                <label>&nbsp;</label>
-	                <input type="submit" value="Sign In" class="med_button" /><br>
+	                <input type="submit" value="Sign In" class="btn-m" /><br>
 	            </form>
 	    </main>
 	</body>

@@ -4,7 +4,7 @@
         <link rel="stylesheet" href="../css/main.css">
     </head>
 	<body>
-	    <main class="center">
+	    <main>
 
 	        <h1 class="title">Sign Up</h1>
 	        <br><br>
@@ -21,7 +21,7 @@
 	            <input type="text" name="password" class="text_input" placeholder="Password" required><br>
 	            <br><br>
 	            <label>&nbsp;</label>
-	            <input type="submit" value="Create Profile" class="med_button" /><br>
+	            <input type="submit" value="Create Profile" class="btn-m" /><br>
 	    </main>
 	</body>
 </html>

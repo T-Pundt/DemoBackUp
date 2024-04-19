@@ -4,11 +4,11 @@
         <link rel="stylesheet" href="../css/main.css">
     </head>
 	<body>
-	    <main class="center">
+	    <main>
 	
 	        <h1>The account was created!</h1>
 
-	        <button type="button" class="large_button" onclick="window.location.href='../main_index.php'">Return Home</button>
+	        <button type="button" class="btn-l" onclick="window.location.href='../main_index.php'">Return Home</button>
 
    		</main>
 	</body>

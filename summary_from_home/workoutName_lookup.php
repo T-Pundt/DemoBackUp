@@ -4,8 +4,8 @@
         <link rel="stylesheet" href="css/main.css">
     </head>
 	<body>
-	    <main class="center">
-	        <button type="button" class="home_button" onclick="window.location.href='../home_Page'">Return Home</button>
+	    <main>
+	        <button type="button" class="btn-m" onclick="window.location.href='../home_Page'">Return Home</button>
 	        <h1>Look up your workout</h1>
 
 	        <form action="." method="post" id="aligned">

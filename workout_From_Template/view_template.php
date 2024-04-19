@@ -4,7 +4,7 @@
         <link rel="stylesheet" href="../css/main.css">
     </head>
 	<body>
-    	<main class="center">
+    	<main>
         	<h1>Template view</h1>
         	<?php foreach($templates as $template) : ?>
             	<form action="." method="post">

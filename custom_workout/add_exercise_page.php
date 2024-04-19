@@ -24,8 +24,7 @@
 
     
     <form method="post">
-    <button type="submit" class="large_button" name="action" value="start_workout">Start Workout
-    </button>
+    <button type="submit" class="btn-l" name="action" value="start_workout">Start Workout</button>
     </form>
 
 </main>

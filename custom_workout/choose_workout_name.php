@@ -8,4 +8,5 @@
 
         <label>&nbsp;</label>
         <input type="submit" value="Add Exercises" /><br>
+	</form>
 </main>
