@@ -15,10 +15,6 @@ foreach($users as $user){
 <main>
     <button type="button" class="btn-m" onclick="window.location.href='./index.php'">Return Home</button>
 
-    <form method="post">
-    <button type="submit" class="btn-m" name="action" value="delete_user">Delete Account</button>
-    </form>
-
     <h1>Profile/Settings</h1>
 
     <form action="." method="post" id="aligned">
@@ -38,5 +34,9 @@ foreach($users as $user){
         <form method="post">
         <button type="submit" class="btn-l" name="action" value="logout_user">Log Out</button>
         </form>
-</main>
+
+        <form method="post">
+        <button type="submit" class="btn-l" name="action" value="delete_user">Delete Account</button>
+        </form>
+    </main>
 </body>
