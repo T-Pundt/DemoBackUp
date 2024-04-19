@@ -31,3 +31,12 @@ function get_workout_exercices($userName, $workoutName){
     $statement->closeCursor();
     return $workoutExercises;
 }
+
+function delete_user_workouts($userName){
+    global $db;
+    $query = 'DELETE FROM user_workouts WHERE userName = :userName';
+    $statement = $db->prepare($query);
+    $statement->bindvalue(':userName', $userName);
+    $statement->execute();
+    $statement->closeCursor();
+}

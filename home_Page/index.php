@@ -1,7 +1,7 @@
 <?php
 require('../model/database.php');
 require('../model/user_db.php');
-
+require('../model/user_workouts_db.php');
 
 $action = filter_input(INPUT_POST, 'action');
 if ($action === NULL){
@@ -32,11 +32,11 @@ else if($action == 'update_user'){
 else if($action == 'delete_user'){
     session_start();
     $userName = $_SESSION['userName'];
-
     delete_user($userName);
+    delete_user_workouts($userName);
     setcookie(session_name(), '', time() - 3600, '/');
     session_destroy();
-    header("Location: ../main_index.php");
+    header("Location: ../index.php");
 
 }
 
