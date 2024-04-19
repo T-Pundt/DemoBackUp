@@ -57,3 +57,7 @@ else if($action == 'workout_summary'){
 else if($action == 'custom_workout'){
     header("Location: ../custom_workout");
 }
+
+else if($action == 'select_previous_workout'){
+    header("Location: ../workout_from_previous");
+}

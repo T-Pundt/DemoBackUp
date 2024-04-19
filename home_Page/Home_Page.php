@@ -1,6 +1,7 @@
 <?php session_start(); ?>
 
 <head>
+
     <link rel="stylesheet" href="../css/main.css">
 </head>
 
@@ -20,6 +21,11 @@
 
         <form method="post">
         <button type="submit" class="btn-l" name="action" value="custom_workout">Custom Workout</form>
+
+        <form method="post">
+        <button type="submit" class="btn-l" name="action" value="select_previous_workout">Select Previous Workout
+        </button>
+        </form><br>
 
         <form method="post">
         <button type="submit" class="btn-l" name="action" value="workout_summary">Workout Summary</button>
